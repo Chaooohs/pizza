@@ -164,16 +164,16 @@ h3 {
                 opacity: 0;
             }
 
-            & .radioIn {
+            & .radioin {
 
-                &:checked+.fakeRadio::before {
+                &:checked+.fakeradio::before {
                     opacity: 1;
                 }
             }
 
-            & .fakeRadio {
+            & .fakeradio {
                 display: inline-block;
-                border: 3px var(--dark) solid;
+                border: 3px var(--black) solid;
                 border-radius: 50%;
                 height: 1em;
                 width: 1em;
@@ -182,13 +182,13 @@ h3 {
                 top: 0.3em;
             }
 
-            & .fakeRadio::before {
+            & .fakeradio::before {
                 content: '';
                 position: absolute;
                 display: block;
                 height: 1em;
                 width: 1em;
-                background-color: var(--dark);
+                background-color: var(--black);
                 border-radius: 50%;
                 top: 50%;
                 left: 50%;
@@ -279,6 +279,11 @@ h3 {
         & span {
             font-weight: 700;
             text-transform: lowercase;
+        }
+
+        & .list {
+            font-size: 14px;
+            text-transform: inherit;
         }
     }
 }

@@ -1,5 +1,5 @@
 //==========================================================================
-import { isEmail, setForm, resetForm, isName, isPhone, submitLight,  } from "./function.js"
+import { isEmail, setForm, resetForm, isName, isPhone, submitLight } from "./function.js"
 
 const el = (selector) => document.querySelector(selector);
 const all = (selector) => document.querySelectorAll(selector);
@@ -7,6 +7,7 @@ const userName = el('#name')
 const userPhone = el('#phone')
 const userEmail = el('#email')
 const reset = el('input[type="reset"]')
+const draggable = all('.draggable')
 
 
 class Cost {
@@ -53,5 +54,48 @@ submitLight('')
 
 // reset of form
 reset.addEventListener('click', resetForm)
+
 // set of form
 el('#btnSubmit').addEventListener('click', setForm)
+
+
+// movable element
+draggable.forEach((item) => {
+  item.addEventListener('dragstart', function (e) {
+    e.dataTransfer.setData('id', e.target.id)
+    e.dataTransfer.setData('sauce', e.target.dataset.sauce)
+    e.dataTransfer.setData('topping', e.target.dataset.topping)
+    e.dataTransfer.setData('name', e.target.dataset.name)
+  })
+})
+
+// override default action for parent
+el('.table').addEventListener('dragover', function (e) {
+  e.preventDefault()
+  // changing the mouse cursor
+  e.dataTransfer.dropEffect = 'copy';
+})
+
+// element release
+el('.table').addEventListener('drop', function (e) {
+  let id = e.dataTransfer.getData('id')
+  let sauce = e.dataTransfer.getData('sauce')
+  let topping = e.dataTransfer.getData('topping')
+  let itemName = e.dataTransfer.getData('name')
+
+  this.appendChild(document.getElementById(id).cloneNode(true))
+
+  if (sauce === 'sauce'){
+    const sauce = document.createElement('p')
+    sauce.classList.add("list");
+    sauce.innerText = itemName
+    el('#sauce').append(sauce)
+  }
+  else if (topping === "topping") {
+    const sauce = document.createElement('p')
+    sauce.classList.add("list");
+    sauce.innerText = itemName
+    el('#topping').append(sauce)
+  }
+})
+

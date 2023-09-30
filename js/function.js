@@ -8,13 +8,13 @@ const submit = el('#btnSubmit')
 const [...entry] = all('#info input[name="entry"]')
 
 
-// regular expression of email
+// regular expression of name
 function regName(name) {
   let rgx = /^[а-яiїє'-]+$/ig;
   return rgx.test(name);
 }
 
-// regular expression of email
+// regular expression of phone
 function regPhone(phone) {
   let rgx = /^\+380\d{9}/ig;
   return rgx.test(phone);
@@ -26,7 +26,7 @@ function regEmail(email) {
   return rgx.test(email);
 }
 
-// email verification
+// name verification
 export const isName = () => {
   if (userName.value === '') {
     userName.classList.remove('success')
@@ -45,7 +45,7 @@ export const isName = () => {
   }
 }
 
-// email verification
+// phone verification
 export const isPhone = () => {
   if (userPhone.value === '') {
     userPhone.classList.remove('success')
