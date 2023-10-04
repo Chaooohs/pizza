@@ -1,0 +1,20 @@
+{
+  "size": [
+    { "productSize": "small", "productCost": 50},
+    { "productSize": "mid", "productCost": 75},
+    { "productSize": "big", "productCost": 100}
+  ],
+  "sauce": [
+    { "productName": "Кетчуп", "productCost": 25, "productID": "sauceClassic"},
+    { "productName": "BBQ", "productCost": 25, "productID": "sauceBBQ"},
+    { "productName": "Рiкотта", "productCost": 25, "productID": "sauceRikotta"}
+  ],
+  "topping": [
+    { "productName": "Сир звичайний", "productCost": 30, "productID": "moc1"},
+    { "productName": "Сир фета", "productCost": 35, "productID": "moc2"},
+    { "productName": "Моцарелла", "productCost": 40, "productID": "moc3"},
+    { "productName": "Телятина", "productCost": 50, "productID": "telya"},
+    { "productName": "Помiдори", "productCost": 15, "productID": "vetch1"},
+    { "productName": "Гриби", "productCost": 30, "productID": "vetch2"}
+  ]
+}

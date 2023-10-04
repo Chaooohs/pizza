@@ -248,18 +248,20 @@ h3 {
             }
 
             & div {
-                display: inline-block;
+                display: grid;
+                grid-template-rows: 100px 1fr;
                 width: 30%;
             }
 
             & div img {
+                grid-row: 1;
                 height: 100px;
             }
 
-            /* & span {
-                display: block;
-                text-align: center;
-            } */
+            & span {
+                grid-row: 2/3;
+                align-self: flex-end;
+            }
         }
 
     }
@@ -272,18 +274,35 @@ h3 {
         padding: 3em;
 
         & p {
-            font-size: 1.8em;
+            font-size: 1.5em;
             text-transform: uppercase;
         }
 
         & span {
             font-weight: 700;
             text-transform: lowercase;
+            margin-left: 10px;
         }
 
-        & .list {
+        & .result__list {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        & .result__item {
             font-size: 14px;
+            font-weight: 500;
             text-transform: inherit;
+            margin: 0px 10px 0 0;
+        }
+
+        & .result__img {
+            cursor: pointer;
+
+            &:hover {
+                background-color: red;
+            }
         }
     }
 }
@@ -327,11 +346,11 @@ h3 {
         }
 
         & .success {
-            box-shadow: 0 0 15px green;
+            box-shadow: 0 0 15px 8px green;
         }
 
         & .error {
-            box-shadow: 0 0 15px red;
+            box-shadow: 0 0 15px 8px red;
         }
 
         & .button {
@@ -435,7 +454,6 @@ h3 {
         text-align: center;
     }
 }
-
 
 
 
