@@ -259,6 +259,9 @@ h3 {
                 grid-row: 1;
                 height: 100px;
                 cursor: grab;
+                &:active {
+                    cursor: grabbing;
+                }
             }
 
             & span {

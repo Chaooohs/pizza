@@ -95,7 +95,7 @@ draggable.forEach((item) => {
 el('.table').addEventListener('dragover', function (e) {
   e.preventDefault()
   // changing the mouse cursor
-  e.dataTransfer.dropEffect = 'copy';
+  e.dataTransfer.dropEffect = 'move';
 })
 
 // element release
