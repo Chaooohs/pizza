@@ -112,6 +112,7 @@ h3 {
 }
 
 .main {
+    position: relative;
     max-width: 1440px;
     background: var(--backMain);
     box-sizing: border-box;
@@ -127,8 +128,9 @@ h3 {
     }
 
     & #banner {
-        position: fixed;
-        bottom: 12%;
+        position: absolute;
+        width: 250px;
+        height: 90px;
         background-color: var(--white);
         box-shadow: 2px 2px 5px #999;
         padding: 1em 1.5em;
@@ -256,6 +258,7 @@ h3 {
             & div img {
                 grid-row: 1;
                 height: 100px;
+                cursor: grab;
             }
 
             & span {

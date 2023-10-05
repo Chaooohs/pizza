@@ -151,31 +151,31 @@ function del() {
 function removeImg(b) {
   all('img').forEach((img) => {
     if (img.closest('.table')) {
-      if(b === 'sauceClassic' && img.id === 'sauceClassic'){
+      if (b === 'sauceClassic' && img.id === 'sauceClassic') {
         el('#a').insertAdjacentElement('afterBegin', img);
       }
-      else if(b === 'sauceBBQ' && img.id === 'sauceBBQ'){
+      else if (b === 'sauceBBQ' && img.id === 'sauceBBQ') {
         el('#b').insertAdjacentElement('afterBegin', img);
       }
-      else if(b === 'sauceRikotta' && img.id === 'sauceRikotta'){
+      else if (b === 'sauceRikotta' && img.id === 'sauceRikotta') {
         el('#c').insertAdjacentElement('afterBegin', img);
       }
-      else if(b === 'moc1' && img.id === 'moc1'){
+      else if (b === 'moc1' && img.id === 'moc1') {
         el('#d').insertAdjacentElement('afterBegin', img);
       }
-      else if(b === 'moc2' && img.id === 'moc2'){
+      else if (b === 'moc2' && img.id === 'moc2') {
         el('#e').insertAdjacentElement('afterBegin', img);
       }
-      else if(b === 'moc3' && img.id === 'moc3'){
+      else if (b === 'moc3' && img.id === 'moc3') {
         el('#f').insertAdjacentElement('afterBegin', img);
       }
-      else if(b === 'telya' && img.id === 'telya'){
+      else if (b === 'telya' && img.id === 'telya') {
         el('#g').insertAdjacentElement('afterBegin', img);
       }
-      else if(b === 'vetch1' && img.id === 'vetch1'){
+      else if (b === 'vetch1' && img.id === 'vetch1') {
         el('#h').insertAdjacentElement('afterBegin', img);
       }
-      else if(b === 'vetch2' && img.id === 'vetch2'){
+      else if (b === 'vetch2' && img.id === 'vetch2') {
         el('#i').insertAdjacentElement('afterBegin', img);
       }
     }
@@ -196,6 +196,11 @@ reset.addEventListener('click', resetForm)
 el('#btnSubmit').addEventListener('click', setForm)
 
 
+// moving banner
+el('#banner').addEventListener('mouseover', function (e) {
+  e.target.style.left = e.target.offsetWidth + Math.ceil(Math.random() * (document.body.offsetWidth/2)) + 'px';
+  e.target.style.top = e.target.offsetHeight + Math.ceil(Math.random() * (document.body.offsetHeight/2)) + 'px';
+})
 
 
 
