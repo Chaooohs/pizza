@@ -119,5 +119,5 @@ export const resetForm = () => {
 
 // checking for cake
 export function checkingForСake(size) {
-  if (size === '') alert('Будь ласкаб оберiть корж 🍕')
+  if (size === '') alert('Будь ласка, оберiть корж 🍕')
 }
