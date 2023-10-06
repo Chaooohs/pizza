@@ -1,0 +1,58 @@
+@media (max-width: 992px) {
+  .header nav,
+  #banner {
+    display: none;
+  }
+  .header {
+    height: 60px;
+  }
+  .main h3,
+  .main form {
+    text-align: start;
+  }
+  .wrapper {
+    display: block;
+    text-align: center;
+  }
+  .main .table-wrapper {
+    flex-direction: column;
+    text-align: center;
+    margin-top: 80px;
+  }
+  .main .table-wrapper .table {
+    width: 100%;
+    margin: 14rem 0 0 0;
+  }
+  .main .table-wrapper .ingridients {
+    width: 100%;
+    margin: 25% 0 0 0;
+  }
+  .main .result {
+    display: block;
+    padding: 30px 0 0;
+    text-align: center;
+  }
+  .main .result div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  label {
+    display: block;
+  }
+  .footer .grid {
+    grid-template-columns: 100%;
+  }
+  .footer .grid > input,
+  .footer .grid input.button {
+    width: 90%;
+    font-size: 1em;
+    line-height: 100%;
+    margin: 18px auto;
+    padding: 5%;
+    box-sizing: border-box;
+  }
+  .footer .grid .button:last-child {
+    width: 90%;
+  }
+}
