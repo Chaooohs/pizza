@@ -1,4 +1,6 @@
 //====================================================
+import { choiceUser } from "./index.js"
+
 const el = (selector) => document.querySelector(selector);
 const all = (selector) => document.querySelectorAll(selector);
 const userName = el('#name')
@@ -88,6 +90,7 @@ export function submitLight(...item) {
   item.forEach(() => {
     if (userPhone.value && userPhone.value && userEmail.value) {
       submit.disabled = false
+      checkingForСake(choiceUser.size)
     }
     else submit.disabled = true
   })
@@ -111,4 +114,10 @@ export const resetForm = () => {
     item.classList.remove('success')
     item.classList.remove('error')
   })
+}
+
+
+// checking for cake
+export function checkingForСake(size) {
+  if (size === '') alert('Будь ласкаб оберiть корж 🍕')
 }

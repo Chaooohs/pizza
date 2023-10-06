@@ -1,5 +1,5 @@
 //==========================================================================
-import { isEmail, setForm, resetForm, isName, isPhone, submitLight } from "./function.js"
+import { isEmail, setForm, resetForm, isName, isPhone, submitLight, checkingForСake } from "./function.js"
 
 const el = (selector) => document.querySelector(selector);
 const all = (selector) => document.querySelectorAll(selector);
@@ -30,7 +30,7 @@ function outJson(json) {
 
 
 // object with ingredients
-const choiceUser = {
+export const choiceUser = {
   size: '',
   sauce: [],
   topping: [],
@@ -52,6 +52,7 @@ function selectUser(choise) {
   if ('sauceClassicsauceBBQsauceRikotta'.includes(choise)) choiceUser.sauce.push(product.sauce.find((item) => item.productID === choise))
   if ('moc1moc2moc3telyavetch1vetch2'.includes(choise)) choiceUser.topping.push(product.topping.find((item) => item.productID === choise))
   calculate(choiceUser)
+  checkingForСake(choiceUser)
 }
 
 
@@ -198,11 +199,6 @@ el('#btnSubmit').addEventListener('click', setForm)
 
 // moving banner
 el('#banner').addEventListener('mouseover', function (e) {
-  e.target.style.left = e.target.offsetWidth + Math.ceil(Math.random() * (document.body.offsetWidth/2)) + 'px';
-  e.target.style.top = e.target.offsetHeight + Math.ceil(Math.random() * (document.body.offsetHeight/2)) + 'px';
+  e.target.style.left = e.target.offsetWidth + Math.ceil(Math.random() * (document.body.offsetWidth / 2)) + 'px';
+  e.target.style.top = e.target.offsetHeight + Math.ceil(Math.random() * (document.body.offsetHeight / 2)) + 'px';
 })
-
-
-
-
-
