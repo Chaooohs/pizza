@@ -115,7 +115,7 @@ el('.table').addEventListener('drop', function (e) {
     el('#sauce').insertAdjacentHTML('beforeend', `
         <div class="result__list" id="${id}">
             <span class="result__item">${name}</span>
-            <img class="result__img" src="../img/close-gray.svg" alt="del">
+            <img class="result__img" src="./img/close-gray.svg" alt="del">
         </div>
     `)
     del()
