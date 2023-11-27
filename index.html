@@ -10,95 +10,97 @@
     <link rel="stylesheet" href="./css/media.css">
 </head>
 <body>
-    <header>
-        <div class="header">
-                <a href="/"><img class="logo" src="Pizza_pictures/pizza-pizza-logo-svg-vector.svg" alt="Логотип Папа Карло"></a>
-            <nav>
-                <ul>
-                    <li>Конструктор піцци</li>
-                    <li>Картопляне меню</li>
-                    <li>Салати</li>
-                    <li>Напої</li>
-                    <li>Доставка</li>
-                    <li>Зворотній зв'язок</li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <main>
-        <div class="main">
-            <h1>Збери піццу своєї мрії</h1>
-            <sub>перетягни всi необхiднi iнгредiєнти</sub>
-            <div class="banner" id="banner">Отримай знижку 30%!<br><button>Отримати</button></div>
-            <h3>Розмiр:</h3>
-            <form id='pizza' action="">
-                <label class="radio"><input type="radio" class="radioin" id="small" name="size" value="small"><span class="fakeradio"></span><span>Маленька</span></label>
-                <label class="radio"><input type="radio" class="radioin" id="mid" name="size" value="mid"><span class="fakeradio"></span><span>Середня</span></label>
-                <label class="radio"><input type="radio" class="radioin" id="big" name="size" value="big"><span class="fakeradio"></span><span>Велика</span></label>
-            </form>
-            <div class="table-wrapper">
-                <div class="table">
-                    <img src="Pizza_pictures/klassicheskij-bortik_1556622914630.png" alt="Корж класичний">
-                </div>
-                <div class="ingridients">
-                    <h3>Соуси:</h3>
-                    <div class="draggable" id="a">
-                        <img draggable="true" data-sauce="sauce" data-name="Кетчуп"  id="sauceClassic" src="Pizza_pictures/sous-klassicheskij_1557758736353.png" alt="">
-                        <span>Кетчуп</span>
-                    </div>
-                    <div class="draggable" id="b">
-                        <img draggable="true" data-sauce="sauce" data-name="BBQ"  id="sauceBBQ" src="Pizza_pictures/sous-bbq_155679418013.png" alt="">
-                        <span>BBQ</span></div>
-                    <div class="draggable" id="c">
-                        <img draggable="true" data-sauce="sauce" data-name="Рiкотта"  id="sauceRikotta" src="Pizza_pictures/sous-rikotta_1556623391103.png" alt="">
-                        <span>Рiкотта</span></div>
-                    <h3>Топінги:</h3>
-                    <div class="draggable" id="d">
-                        <img draggable="true" data-topping="topping" data-name="Сир"  id="moc1" src="Pizza_pictures/mocarela_1556623220308.png" alt="">
-                        <span>Сир</span></div>
-                    <div class="draggable" id="e">
-                        <img draggable="true" data-topping="topping" data-name="Сир фета"  id="moc2" src="Pizza_pictures/mocarela_1556785182818.png" alt="">
-                        <span>Сир фета</span></div>
-                    <div class="draggable" id="f">
-                        <img draggable="true" data-topping="topping" data-name="Моцарелла"  id="moc3" src="Pizza_pictures/mocarela_1556785198489.png" alt="">
-                        <span>Моцарелла</span></div>
-                    <div class="draggable" id="g">
-                        <img draggable="true" data-topping="topping" data-name="Телятина"  id="telya" src="Pizza_pictures/telyatina_1556624025747.png" alt="">
-                        <span>Телятина</span></div>
-                    <div class="draggable" id="h">
-                        <img draggable="true" data-topping="topping" data-name="Помiдори"  id="vetch1" src="Pizza_pictures/vetchina.png" alt="">
-                        <span>Помiдори</span></div>
-                    <div class="draggable" id="i">
-                        <img draggable="true" data-topping="topping" data-name="Гриби"  id="vetch2" src="Pizza_pictures/vetchina_1556623556129.png" alt="">
-                        <span>Гриби</span></div>
-                </div>
-            </div>
-            <div class="result">
-                <div class="price"><p>Цiна: <span id="price"></span> </p></div>
-                <div class="sauces"><div>Соуси: <div id="sauce"></div></div></div>
-                <div class="topings"><div>Топiнги: <div id="topping"></div> </div></div>
-            </div>
-        </div>
-    </main>
-    <footer>
-        <div class="footer">
-            <h3>Пiдтверди замовлення</h3>
-            <sub>введи данi i пiдтверди замовлення</sub>
-            <form id="info" method="POST" action="./php/mail.php">
-                <div class="grid">
-                    <label for="name">Ваше ім'я</label>
-                    <input placeholder="Iм'я" id="name" type="text" name="entry">
-                    <label for="phone">Номер телефону</label>
-                    <input placeholder="+380505050500" id="phone" type="tel" name="entry">
-                    <label for="email">Електронна пошта</label>
-                    <input placeholder="email@email.com" id="email" type="email" name="entry">
-                    <input class='button' name="cancel" type="reset" value="Зкинути">
-                    <input class='button' id="btnSubmit" type="button" value="Підтвердити замовлення >>">
-                </div>
-            </form>
-            <address id="date"></address>
-        </div>
-    </footer>
+    <div class="page">
+      <header>
+          <div class="header">
+                  <a href="/"><img class="logo" src="Pizza_pictures/pizza-pizza-logo-svg-vector.svg" alt="Логотип Папа Карло"></a>
+              <nav>
+                  <ul>
+                      <li>Конструктор піцци</li>
+                      <li>Картопляне меню</li>
+                      <li>Салати</li>
+                      <li>Напої</li>
+                      <li>Доставка</li>
+                      <li>Зворотній зв'язок</li>
+                  </ul>
+              </nav>
+          </div>
+      </header>
+      <main>
+          <div class="main">
+              <h1>Збери піццу своєї мрії</h1>
+              <sub>перетягни всi необхiднi iнгредiєнти</sub>
+              <div class="banner" id="banner">Отримай знижку 30%!<br><button>Отримати</button></div>
+              <h3>Розмiр:</h3>
+              <form id='pizza' action="">
+                  <label class="radio"><input type="radio" class="radioin" id="small" name="size" value="small"><span class="fakeradio"></span><span>Маленька</span></label>
+                  <label class="radio"><input type="radio" class="radioin" id="mid" name="size" value="mid"><span class="fakeradio"></span><span>Середня</span></label>
+                  <label class="radio"><input type="radio" class="radioin" id="big" name="size" value="big"><span class="fakeradio"></span><span>Велика</span></label>
+              </form>
+              <div class="table-wrapper">
+                  <div class="table">
+                      <img src="Pizza_pictures/klassicheskij-bortik_1556622914630.png" alt="Корж класичний">
+                  </div>
+                  <div class="ingridients">
+                      <h3>Соуси:</h3>
+                      <div class="draggable" id="a">
+                          <img draggable="true" data-sauce="sauce" data-name="Кетчуп"  id="sauceClassic" src="Pizza_pictures/sous-klassicheskij_1557758736353.png" alt="">
+                          <span>Кетчуп</span>
+                      </div>
+                      <div class="draggable" id="b">
+                          <img draggable="true" data-sauce="sauce" data-name="BBQ"  id="sauceBBQ" src="Pizza_pictures/sous-bbq_155679418013.png" alt="">
+                          <span>BBQ</span></div>
+                      <div class="draggable" id="c">
+                          <img draggable="true" data-sauce="sauce" data-name="Рiкотта"  id="sauceRikotta" src="Pizza_pictures/sous-rikotta_1556623391103.png" alt="">
+                          <span>Рiкотта</span></div>
+                      <h3>Топінги:</h3>
+                      <div class="draggable" id="d">
+                          <img draggable="true" data-topping="topping" data-name="Сир"  id="moc1" src="Pizza_pictures/mocarela_1556623220308.png" alt="">
+                          <span>Сир</span></div>
+                      <div class="draggable" id="e">
+                          <img draggable="true" data-topping="topping" data-name="Сир фета"  id="moc2" src="Pizza_pictures/mocarela_1556785182818.png" alt="">
+                          <span>Сир фета</span></div>
+                      <div class="draggable" id="f">
+                          <img draggable="true" data-topping="topping" data-name="Моцарелла"  id="moc3" src="Pizza_pictures/mocarela_1556785198489.png" alt="">
+                          <span>Моцарелла</span></div>
+                      <div class="draggable" id="g">
+                          <img draggable="true" data-topping="topping" data-name="Телятина"  id="telya" src="Pizza_pictures/telyatina_1556624025747.png" alt="">
+                          <span>Телятина</span></div>
+                      <div class="draggable" id="h">
+                          <img draggable="true" data-topping="topping" data-name="Помiдори"  id="vetch1" src="Pizza_pictures/vetchina.png" alt="">
+                          <span>Помiдори</span></div>
+                      <div class="draggable" id="i">
+                          <img draggable="true" data-topping="topping" data-name="Гриби"  id="vetch2" src="Pizza_pictures/vetchina_1556623556129.png" alt="">
+                          <span>Гриби</span></div>
+                  </div>
+              </div>
+              <div class="result">
+                  <div class="price"><p>Цiна: <span id="price"></span> </p></div>
+                  <div class="sauces"><div>Соуси: <div id="sauce"></div></div></div>
+                  <div class="topings"><div>Топiнги: <div id="topping"></div> </div></div>
+              </div>
+          </div>
+      </main>
+      <footer>
+          <div class="footer">
+              <h3>Пiдтверди замовлення</h3>
+              <sub>введи данi i пiдтверди замовлення</sub>
+              <form id="info" method="POST" action="./php/mail.php">
+                  <div class="grid">
+                      <label for="name">Ваше ім'я</label>
+                      <input placeholder="Iм'я" id="name" type="text" name="entry">
+                      <label for="phone">Номер телефону</label>
+                      <input placeholder="+380505050500" id="phone" type="tel" name="entry">
+                      <label for="email">Електронна пошта</label>
+                      <input placeholder="email@email.com" id="email" type="email" name="entry">
+                      <input class='button' name="cancel" type="reset" value="Зкинути">
+                      <input class='button' id="btnSubmit" type="button" value="Підтвердити замовлення >>">
+                  </div>
+              </form>
+              <address id="date"></address>
+          </div>
+      </footer>
+    </div>
 
     <script src="./js/index.js" type="module"></script>
 </body>
